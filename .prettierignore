@@ -1,0 +1,8 @@
+.next
+dist
+node_modules
+.env
+.env.example
+pnpm-lock.yaml
+README.md
+next-env.d.ts

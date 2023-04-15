@@ -6,9 +6,15 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "prettier:fix": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "check-types": "tsc --pretty --noEmit",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "check-all": "pnpm prettier:check && pnpm check-lint && pnpm check-types"
   },
   "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
     "next": "^13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
