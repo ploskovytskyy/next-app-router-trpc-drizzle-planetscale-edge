@@ -4,6 +4,8 @@ import "~/styles/globals.css";
 import { siteConfig } from "~/config/site";
 import { absoluteUrl, cn } from "~/lib/utils";
 
+import { ClientProviders } from "./client-providers";
+
 const fontSans = Inter({
   weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
@@ -46,20 +48,20 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [
-      {
-        url: absoluteUrl("/og.jpg"),
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
+    // images: [
+    //   {
+    //     url: absoluteUrl("/og.jpg"),
+    //     width: 1200,
+    //     height: 630,
+    //     alt: siteConfig.name,
+    //   },
+    // ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/og.jpg`],
+    // images: [`${siteConfig.url}/og.jpg`],
     creator: "@o_ploskovytskyy",
   },
   icons: {
@@ -76,9 +78,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head />
-      <body className={cn("min-h-screen antialiased", fontSans.className)}>
-        <main>{children}</main>
-      </body>
+      <ClientProviders>
+        <body className={cn("min-h-screen antialiased", fontSans.className)}>
+          <main>{children}</main>
+        </body>
+      </ClientProviders>
     </html>
   );
 }
