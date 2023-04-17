@@ -15,24 +15,32 @@
     "prettier:check": "prettier --check .",
     "check-types": "tsc --pretty --noEmit",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
-    "check-all": "pnpm prettier:check && pnpm check-lint && pnpm check-types"
+    "check-all": "pnpm prettier:check && pnpm check-lint && pnpm check-types",
+    "db:push": "pnpm drizzle-kit push:mysql"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.16.2",
+    "@hookform/resolvers": "^3.0.1",
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
-    "@tanstack/query-core": "^4.29.1",
-    "@tanstack/react-query": "^4.29.2",
+    "@planetscale/database": "^1.7.0",
+    "@radix-ui/react-dialog": "^1.0.3",
+    "@radix-ui/react-label": "^2.0.1",
+    "@tanstack/query-core": "4.14.5",
+    "@tanstack/react-query": "4.14.5",
     "@trpc/client": "^10.20.0",
     "@trpc/next": "^10.20.0",
     "@trpc/react-query": "^10.20.0",
     "@trpc/server": "^10.20.0",
     "class-variance-authority": "^0.5.2",
     "clsx": "^1.2.1",
+    "drizzle-orm": "^0.23.13",
     "lucide-react": "^0.145.0",
     "next": "^13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.9",
     "server-only": "^0.0.1",
+    "slugify": "^1.6.6",
     "superjson": "^1.12.2",
     "tailwind-merge": "^1.12.0",
     "tailwindcss-animate": "^1.0.5",
@@ -47,6 +55,8 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "autoprefixer": "^10.4.14",
+    "dotenv": "^16.0.3",
+    "drizzle-kit": "0.17.1-5df459e",
     "eslint": "^8.36.0",
     "eslint-config-next": "^13.2.4",
     "postcss": "^8.4.21",
@@ -57,5 +67,10 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.10.3"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@tanstack/react-query@4.14.5": "patches/@tanstack__react-query@4.14.5.patch"
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { clsx, type ClassValue } from "clsx";
+import slugifyjs from "slugify";
 import { twMerge } from "tailwind-merge";
 import { env } from "~/env.mjs";
 
@@ -17,4 +18,8 @@ export function formatDate(input: string | number): string {
 
 export function absoluteUrl(path: string) {
   return `${env.NEXT_PUBLIC_APP_URL}${path}`;
+}
+
+export function slugify(string: string) {
+  return slugifyjs(string, { lower: true });
 }

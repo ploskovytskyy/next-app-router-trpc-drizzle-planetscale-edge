@@ -30,7 +30,7 @@ export function H3({ children, className }: PropsWithChildrenAndClassName) {
   return (
     <h3
       className={cn(
-        "mt-8 scroll-m-20 text-2xl font-semibold tracking-tight",
+        "scroll-m-20 text-2xl font-semibold tracking-tight",
         className
       )}
     >
@@ -43,7 +43,7 @@ export function H4({ children, className }: PropsWithChildrenAndClassName) {
   return (
     <h4
       className={cn(
-        "mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+        "scroll-m-20 text-xl font-semibold tracking-tight",
         className
       )}
     >

@@ -1,0 +1,14 @@
+diff --git a/build/lib/reactBatchedUpdates.mjs b/build/lib/reactBatchedUpdates.mjs
+index 8a5ec0f3acd8582e6d63573a9479b9cae6b40f88..48c77d58736392bc3712651c978f4f5e48697993 100644
+--- a/build/lib/reactBatchedUpdates.mjs
++++ b/build/lib/reactBatchedUpdates.mjs
+@@ -1,6 +1,6 @@
+-import * as ReactDOM from 'react-dom';
+-
+-const unstable_batchedUpdates = ReactDOM.unstable_batchedUpdates;
++const unstable_batchedUpdates = (callback) => {
++    callback()
++}
+ 
+ export { unstable_batchedUpdates };
+ //# sourceMappingURL=reactBatchedUpdates.mjs.map
