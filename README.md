@@ -3,6 +3,7 @@
 
 Inspired by [T3 stack](https://create.t3.gg/) and [Shadcn Taxonomy](https://tx.shadcn.com/) project, I created this example of experimental edge stack full of sweet and fancy features for you to play with. Shout out to a bunch of open source solutions on the GitHub which I combined here.
 
+[deployed demo](https://giga-stack.vercel.app/)
 
 ## Features
 
