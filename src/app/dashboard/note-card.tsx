@@ -19,12 +19,12 @@ export default function NoteCard({ id, title, text }: Props) {
   const { mutate: deleteNote, isLoading: isDeleting } =
     api.example.deleteNote.useMutation({ onSuccess: () => router.refresh() });
   return (
-    <div className="flex items-center gap-5 justify-between border rounded p-4">
+    <div className="grid md:flex md:items-center gap-5 md:justify-between border dark:border-stone-700 rounded p-4">
       <div className="">
         <H3>{title}</H3>
-        <p>{text}</p>
+        <p className="line-clamp-2">{text}</p>
       </div>
-      <div className="flex gap-4">
+      <div className="grid grid-cols-2 md:flex gap-4">
         <EditNote id={id} title={title} text={text} />
         <Button
           disabled={isDeleting}

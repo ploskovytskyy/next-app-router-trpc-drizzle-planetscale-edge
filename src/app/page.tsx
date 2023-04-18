@@ -15,9 +15,9 @@ export default async function Page() {
 
   return (
     <>
-      <section className="grid gap-4 text-center py-16 border-b bg-gradient-to-r from-rose-100 to-teal-100">
-        <h1 className="text-6xl font-black">Giga Stack ✨</h1>
-        <Large>{`The most Twitter influenced stack you've ever seen`}</Large>
+      <section className="grid gap-4 text-center py-10 md:py-16 border-b bg-gradient-to-r from-rose-100 to-teal-100 dark:from-rose-100/80 dark:to-teal-100/80 text-stone-900">
+        <h1 className="text-4xl md:text-6xl font-black px-6">Giga Stack ✨</h1>
+        <Large className="px-6">{`The most Twitter influenced stack you've ever seen`}</Large>
         <div className="flex gap-5 justify-center">
           <Link href="/dashboard" className={cn(buttonVariants())}>
             Dashboard
@@ -57,7 +57,7 @@ export default async function Page() {
           sweet and fancy features for you to play with. Shout out to a bunch of
           open source solutions on the GitHub which I combined here.
         </p>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 gap-5">
           <FeatureCard
             href="https://nextjs.org/"
             title="Next.js"
@@ -99,7 +99,7 @@ export default async function Page() {
         </P>
         <div className="mb-10">
           <H4 className="mb-4">To make a RSC api call:</H4>
-          <pre className="bg-slate-50 rounded mb-5">
+          <pre className="bg-stone-50 rounded mb-5 text-stone-900 dark:bg-opacity-90 overflow-auto">
             {`
   import { api } from "~/lib/api/server";
   
@@ -109,13 +109,13 @@ export default async function Page() {
               `}
           </pre>
           Example (watch the code):
-          <div className="flex p-1 border rounded mt-2">
+          <div className="flex p-1 border dark:border-stone-700 rounded mt-2">
             <Lead>{greeting}</Lead>
           </div>
         </div>
         <div className="mb-10">
           <H4 className="mb-4">To make a Client api call:</H4>
-          <pre className="bg-slate-50 rounded mb-5">
+          <pre className="bg-stone-50 rounded mb-5 text-stone-900 dark:bg-opacity-90 overflow-auto">
             {`
   "use client";
 
@@ -127,7 +127,7 @@ export default async function Page() {
               `}
           </pre>
           Example (watch the code):
-          <div className="flex p-1 border rounded mt-2">
+          <div className="flex p-1 border dark:border-stone-700 rounded mt-2">
             <Lead>
               <HelloFromClient />
             </Lead>
@@ -139,7 +139,7 @@ export default async function Page() {
             The idea is simple - mutate on client and refresh the route on
             success
           </p>
-          <pre className="bg-slate-50 rounded mb-5">
+          <pre className="bg-stone-50 rounded mb-5 text-stone-900 dark:bg-opacity-90 overflow-auto">
             {`
   const router = useRouter();
 
