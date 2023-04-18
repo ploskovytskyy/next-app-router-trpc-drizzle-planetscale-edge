@@ -5,6 +5,7 @@ export type SiteConfig = {
   ogImage: string;
   links: {
     twitter: string;
+    github: string;
   };
 };
 
@@ -16,5 +17,6 @@ export const siteConfig: SiteConfig = {
   ogImage: "",
   links: {
     twitter: "https://twitter.com/o_ploskovytskyy",
+    github: "/",
   },
 };

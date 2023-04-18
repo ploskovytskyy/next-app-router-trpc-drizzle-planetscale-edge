@@ -7,7 +7,7 @@ import { absoluteUrl, cn } from "~/lib/utils";
 import { ClientProviders } from "./client-providers";
 
 const fontSans = Inter({
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -79,8 +79,34 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <head />
       <ClientProviders>
-        <body className={cn("min-h-screen antialiased", fontSans.className)}>
-          <main>{children}</main>
+        <body className={cn("antialiased", fontSans.className)}>
+          <main className="min-h-screen">{children}</main>
+          <footer className="bg-gradient-to-l from-rose-100 to-teal-100">
+            <div className="flex container items-center justify-between gap-4 py-6 text-sm">
+              <p>
+                Built by{" "}
+                <a
+                  href={siteConfig.links.twitter}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold underline underline-offset-4"
+                >
+                  @o_ploskovytskyy
+                </a>
+              </p>
+              <p>
+                The source code is available on{" "}
+                <a
+                  href={siteConfig.links.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold underline underline-offset-4"
+                >
+                  GitHub
+                </a>
+              </p>
+            </div>
+          </footer>
         </body>
       </ClientProviders>
     </html>

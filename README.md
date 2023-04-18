@@ -1,28 +1,47 @@
-# Create T3 App
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+# Giga Stack ✨
 
-## What's next? How do I make an app with this?
+Inspired by [T3 stack](https://create.t3.gg/) and [Shadcn Taxonomy](https://tx.shadcn.com/) project, I created this example of experimental edge stack full of sweet and fancy features for you to play with. Shout out to a bunch of open source solutions on the GitHub which I combined here.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Features
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- ``Next.js`` 13 app dir (edge runtime)
+- ``tRPC``
+- ``Clerk`` Auth
+- ``Drizzle`` ORM + ``PlanetScale`` serverless js driver
+- ``Shadcn/ui`` (Radix UI + Tailwind)
 
-## Learn More
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Try it yourself
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Install dependencies using pnpm:
+```bash
+pnpm install
+```
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+Copy .env.example to .env and update the variables:
+```bash
+cp .env.example .env
+```
 
-## How do I deploy this?
+Push schema to PlanetScale:
+```bash
+pnpm db:push
+```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Have fun
+```bash
+pnpm dev
+```
+
+
+    
+## Resources
+
+ - [shadcn/taxonomy](https://github.com/shadcn/taxonomy/blob/main/README.md)
+ - [mattddean](https://github.com/mattddean/t3-app-router-edge-drizzle)
+ - [solaldunckel](https://github.com/solaldunckel/next-13-app-router-with-trpc)
+ - [og create-t3-app](https://github.com/t3-oss/create-t3-app)
+
+
