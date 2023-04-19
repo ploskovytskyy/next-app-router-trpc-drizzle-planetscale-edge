@@ -39,7 +39,8 @@ pnpm dev
 
     
 ## Resources
-
+ 
+ - [next add dir + trpc](https://github.com/trpc/next-13)
  - [shadcn/taxonomy](https://github.com/shadcn/taxonomy/blob/main/README.md)
  - [mattddean](https://github.com/mattddean/t3-app-router-edge-drizzle)
  - [solaldunckel](https://github.com/solaldunckel/next-13-app-router-with-trpc)
